@@ -11,7 +11,7 @@ enable_frame_interpolation: false
 adaptive_quality: true
 object_threshold: 1.0
 alert_cooldown: 20
-telegram_bot_token: 8024609045:AAH5wG3c6mdO0RYx8ACnLnTiJU7k2wx8ZAw
+telegram_bot_token: xxxxxxxxxxxxxxxxxO0RYx8ACnLnTiJU7k2wx8ZAw
 telegram_chat_id: '-1002495575128'
 telegram_message_thread_id: 2
 yolo_model_path: yolo11n.pt
