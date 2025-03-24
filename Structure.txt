@@ -1,0 +1,63 @@
+# Project Tree Structure for FOD Detection System
+
+```
+FOD_Detection_System/
+│
+├── main.py                        # Main entry point
+│
+├── config.yaml                    # Configuration file
+│
+├── core/                          # Core functionality modules
+│   ├── __init__.py
+│   ├── alert_manager.py           # Manages detection alerts
+│   ├── detector.py                # YOLOv8 detection engine
+│   ├── model_transition_manager.py # Handles model changes
+│   ├── roi_manager.py             # ROI definitions and management
+│   └── video_source.py            # Camera and video stream handling
+│
+├── ui/                            # User interface components
+│   ├── __init__.py
+│   ├── main_window.py             # Main application window
+│   ├── alerts_view.py             # Alerts history view
+│   ├── camera_view.py             # Camera feed display
+│   ├── class_editor.py            # Object class editor
+│   ├── class_mapping_dialog.py    # Class mapping between models
+│   ├── class_priority_panel.py    # Class priority configuration
+│   ├── roi_editor.py              # Enhanced ROI editor with multiple shapes
+│   ├── settings_panel.py          # Application settings panel
+│   └── statistics_view.py         # Statistics and reporting
+│
+├── storage/                       # Data storage and management
+│   ├── __init__.py
+│   ├── class_manager.py           # Object class definitions
+│   └── database.py                # SQLite database for alerts
+│
+├── notifications/                 # Alert notification channels
+│   ├── __init__.py
+│   ├── base.py                    # Base notification class
+│   ├── email.py                   # Email notifications
+│   ├── sound.py                   # Sound alerts 
+│   └── telegram.py                # Telegram notifications
+│
+├── utils/                         # Utility modules
+│   ├── __init__.py
+│   ├── config.py                  # Configuration management
+│   ├── logging.py                 # Logging setup
+│   └── system_info.py             # System resource monitoring
+│
+├── Snapshots/                     # Directory for alert images
+│
+├── EventVideos/                   # Directory for alert videos
+│
+└── logs/                          # Log files directory
+```
+
+This tree structure shows the organization of the FOD Detection System project, highlighting the main components and their relationships. The system is organized into logical modules:
+
+- `core/`: Contains the fundamental detection and processing logic
+- `ui/`: Houses all user interface components
+- `storage/`: Manages data persistence and object definitions
+- `notifications/`: Handles different alert notification methods
+- `utils/`: Provides various utility functions and helpers
+
+The ROI Configuration enhancements we implemented are primarily in `core/roi_manager.py` and `ui/roi_editor.py`, which now support multiple shape types (polygon, rectangle, circle, freehand, and Bezier curves) with improved visualization and editing capabilities.
